@@ -10,7 +10,7 @@
     "axios": "^0.19.2",
     "less": "^3.11.3",
     "mirrorx": "^1.1.1",
-    "moment": "^2.27.0",
+    "mockjs": "^1.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
