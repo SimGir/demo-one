@@ -17,6 +17,7 @@ axios.defaults.withCredentials = true
 // 拦截器--请求发送前
 axios.interceptors.request.use(
   function(config){
+    console.log("config", config)
     return config
   },
   function(error){

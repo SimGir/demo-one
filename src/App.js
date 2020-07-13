@@ -27,9 +27,10 @@ class App extends React.Component {
         <Header>
           header
         </Header>
-        <Layout className="App-content">
-          <Sider theme="light">
-            <Menu 
+        <Layout className="App-middle">
+          <Sider className="App-sider">
+            <Menu
+              theme="dark"
               mode="inline" 
               onClick={this.changeRoute}
             >
@@ -44,11 +45,11 @@ class App extends React.Component {
               })}
             </Menu>
           </Sider>
-          <Content>
+          <Content className="App-content">
             <Switch>
               <Route exact path='/' 
                 render={() => (
-                  <Redirect to='/projects/page1' />
+                  <Redirect to='/project/statistics' />
                 )}
               />
               {routes.map((item, index)=>{

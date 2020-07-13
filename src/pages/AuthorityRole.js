@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect, actions } from 'mirrorx'
 
-class User extends Component {
+class AuthorityRole extends Component {
 
   componentDidMount() {
     actions.user.currentUser().then(res=>{
@@ -12,11 +12,11 @@ class User extends Component {
   render(){
     // console.log("this.props", this.props)
     return(
-      <div>用户页</div>
+      <div>角色管理</div>
     )
   }
 }
 
 export default connect(state => {
   return { user: state.user }
-})(User)
+})(AuthorityRole)

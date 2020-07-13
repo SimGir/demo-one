@@ -1,9 +1,13 @@
-import Page1 from './Page1'
-import Page2 from './Page2'
-import User from './User'
+import ProjectList from './ProjectList'
+import ProjectStatistics from './ProjectStatistics'
+import CustomerList from './CustomerList'
+import AuthorityRole from './AuthorityRole'
+import AuthorityUser from './AuthorityUser'
 
 export {
-  Page1,
-  Page2,
-  User
+  ProjectList,
+  ProjectStatistics,
+  CustomerList,
+  AuthorityRole,
+  AuthorityUser
 }

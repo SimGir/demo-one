@@ -1,23 +1,33 @@
-import Page1 from '../pages/Page1'
-import Page2 from '../pages/Page2'
-import User from '../pages/User'
+import ProjectStatistics from '../pages/ProjectStatistics'
+import ProjectList from '../pages/ProjectList'
+import CustomerList from '../pages/CustomerList'
+import AuthorityUser from '../pages/AuthorityUser'
+import AuthorityRole from '../pages/AuthorityRole'
 
 let routes = [
   {
     path: '/',
-    redirect: '/projects/page1'
+    redirect: '/project/statistics'
   },
   {
-    path: '/projects/page1',
-    component: Page1
+    path: '/project/statistics',
+    component: ProjectStatistics
   },
   {
-    path: '/projects/page2',
-    component: Page2
+    path: '/project/list',
+    component: ProjectList
   },
   {
-    path: '/user',
-    component: User
+    path: '/customer/list',
+    component: CustomerList
+  },
+  {
+    path: '/authority/user',
+    component: AuthorityUser
+  },
+  {
+    path: '/authority/role',
+    component: AuthorityRole
   }
 ]
 
