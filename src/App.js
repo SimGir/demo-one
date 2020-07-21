@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route, Redirect, actions } from 'mirrorx';
-
+// import { AuthorityUser } from './pages'
 import menu from './lib/menu';
 import routes from './lib/route';
 
@@ -47,13 +47,27 @@ class App extends React.Component {
           </Sider>
           <Content className="App-content">
             <Switch>
-              <Route exact path='/' 
+              {/* 
+                两种打开默认页面的方式
+                1.<IndexRedirect to="/path" /> 打开默认页时跳转到/path路径对应的页面，路由地址会改变
+                2.<IndexRoute component={Home}/>  打开默认页时打开Home页，路由地址不会改变
+               
+                有两种写法
+                  1. 可以在<Route>标签中嵌套<Route>或<Redirect>标签
+                  2. 可以在<Route>标签的render属性写回调函数返回<Route>或<Redirect>标签
+                mirrorx中路由的对应写法如下
+              */}
+              {/* <Route exact path='/' 
                 render={() => (
-                  <Redirect to='/project/statistics' />
+                  <Redirect to='/project/statistics' />  // 默认页地址改变
+                  // <Route component={AuthorityUser} />  // 默认页地址不变
                 )}
-              />
+              /> */}
               {routes.map((item, index)=>{
-                return <Route key={index} exact path={item.path} component={item.component} />
+                return <Route key={index} exact path={item.path} component={item.component} >
+                  {/* 首页path='/'重定向 */}
+                  {item.redirect && <Redirect to={item.redirect} />}
+                </Route>
               })}
             </Switch>
           </Content>

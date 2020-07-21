@@ -8,9 +8,13 @@ import * as serviceWorker from './serviceWorker';
 // 引入mirrorx状态机
 import './models';
 
-// mirror.defaults({
-//   historyMode: "hash"
-// })
+/* 
+  路由模式改为hash模式，地址上带有#
+  默认是history模式，项目打包后路由跳转不了
+*/
+mirror.defaults({
+  historyMode: "hash"
+})
 
 mirror.render(
   <Router>
